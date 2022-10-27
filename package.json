@@ -20,7 +20,7 @@
   "author": "oscar barajas <oscar@gndx.dev>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lilseniorj/curso-webpack.git"
+    "url": "https://github.com/gndx/js-portfolio/issues"
   },
   "homepage": "https://github.com/gndx/js-portfolio#readme",
   "devDependencies": {
