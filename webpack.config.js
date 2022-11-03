@@ -11,7 +11,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[constenhash].js',
+    filename: '[name].[contenthash].js',
     assetModuleFilename: 'assets/images/[hash][ext][query]'
   },
   resolve: {
@@ -33,15 +33,15 @@ module.exports = {
         }
       },
       {
-        test: /\.s?css|.styl$/,
+        test: /\.css|.styl$/i,
         use: [MiniCssExtractPlugin.loader,
           'css-loader',
-          'stylus-loader',
+          'stylus-loader'
         ],
       },
       {
         test: /\.png/,
-        type: "asset/resource"
+        type: 'asset/resource'
       },
       {
         test: /\.(woff|woff2)$/,
@@ -49,12 +49,12 @@ module.exports = {
           loader: 'url-loader',
           options: {
             limit: 10000,
-            mimetype: 'aplication/font-woff',
-            name: "[name].[constenthash].[ext]",
+            mimetype: "application/font-woff",
+            name: "[name].[contenthash].[ext]",
             outputPath: "./assets/fonts/",
             publicPath: "../assets/fonts/",
             esModule: false,
-          }
+          },
         }
       }
     ]
